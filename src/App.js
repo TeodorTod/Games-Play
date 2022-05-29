@@ -1,8 +1,11 @@
 import { useState } from "react";
 
 import CreateGame from "./components/CreateGame";
+import ErrorPage from "./components/ErrorPage";
 import GameCatalog from "./components/GameCatalog";
 import Header from "./components/Header";
+import Login from "./components/Login";
+import Register from "./components/Register";
 import WelcomeWorld from "./components/WelcomeWorld";
 
 
@@ -11,7 +14,9 @@ function App() {
     const routes = {
         '/home': <WelcomeWorld />,
         '/games': <GameCatalog />,
-        '/create-game': <CreateGame />
+        '/create-game': <CreateGame />,
+        '/login': <Login />,
+        '/register': <Register />
     };
 
     const naviagtionChangeHandler = (path) => {
@@ -26,7 +31,7 @@ function App() {
         />
 
         <main id="main-content">
-            { routes[page] || <h1>No Page Found!</h1> }
+            { routes[page] || <ErrorPage/> }
         </main>
 
     </div>
