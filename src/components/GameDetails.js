@@ -1,4 +1,6 @@
-const GameDetails = () => {
+const GameDetails = ({
+    id
+}) => {
 
     return (
         <section id="game-details">
