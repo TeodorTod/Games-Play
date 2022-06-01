@@ -1,18 +1,24 @@
-import { Link as navLink, NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
+    let activeLinkStyles = {
+        backgroundColor: 'blue',
+        textDecoration: 'underline'
+    };
+
+
     return (
         <header>
-        <h1><navLink className="home" to="/">GamesPlay</navLink></h1>
+        <h1><NavLink className="home" to="/">GamesPlay</NavLink></h1>
         <nav>
-            <navLink to="/games">All games</navLink>
+            <NavLink activeStyle={activeLinkStyles} to="/games">All games</NavLink>
             <div id="user">
-                <navLink to="/create-game">Create Game</navLink>
-                <navLink to="/logout">Logout</navLink>
+                <NavLink activeStyle={activeLinkStyles} to="/create-game">Create Game</NavLink>
+                <NavLink activeStyle={activeLinkStyles} to="/logout">Logout</NavLink>
             </div>
             <div id="guest">
-                <navLink to="/login">Login</navLink>
-                <navLink to="/register">Register</navLink>
+                <NavLink activeStyle={activeLinkStyles} to="/login">Login</NavLink>
+                <NavLink activeStyle={activeLinkStyles} to="/register">Register</NavLink>
             </div>
         </nav>
     </header>
