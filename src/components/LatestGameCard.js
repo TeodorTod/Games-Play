@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 const LatestGameCard = ({
-        game,
-        naviagtionChangeHandler
+        game
+        
     }) => {
     const onDetailClick = (e) => {
             e.preventDefault();
