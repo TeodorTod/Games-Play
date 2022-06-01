@@ -1,18 +1,18 @@
-import { Link } from "react-router-dom";
+import { Link as navLink, NavLink } from "react-router-dom";
 
 const Header = () => {
     return (
         <header>
-        <h1><Link className="home" to="/">GamesPlay</Link></h1>
+        <h1><navLink className="home" to="/">GamesPlay</navLink></h1>
         <nav>
-            <Link to="/games">All games</Link>
+            <navLink to="/games">All games</navLink>
             <div id="user">
-                <Link to="/create-game">Create Game</Link>
-                <Link to="/logout">Logout</Link>
+                <navLink to="/create-game">Create Game</navLink>
+                <navLink to="/logout">Logout</navLink>
             </div>
             <div id="guest">
-                <Link to="/login">Login</Link>
-                <Link to="/register">Register</Link>
+                <navLink to="/login">Login</navLink>
+                <navLink to="/register">Register</navLink>
             </div>
         </nav>
     </header>

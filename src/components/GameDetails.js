@@ -3,10 +3,11 @@ import { useState, useEffect } from "react";
 import * as gameService from'../services/gameService';
 
 const GameDetails = ({
-    match
+    match,
+    history
 }) => {
     const [game, setGame] = useState({});
-    console.log(match);
+    console.log(history);
     
     useEffect(() => {
         gameService.getOne(match.params.gameId)
